@@ -42,7 +42,7 @@ var config = {
             name: 'common',
             filename: 'js/base.js'
         }),
-        // 把css 单独打包到文件里
+        // 把css单独打包到文件里
         new ExtractTextPlugin('css/[name].css'),
         // html模版的处理
         new HtmlWebpackPlugin(getHtmlConfig('index')),
