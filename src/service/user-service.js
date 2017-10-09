@@ -74,10 +74,38 @@ var _user = {
             error: reject
         });
     },
-     // 用户注册
-     register: function(userInfo, resolve, reject) {
+    // 用户注册
+    register: function(userInfo, resolve, reject) {
         _mm.request({
             url: _mm.getServerUrl('/user/register.do'),
+            data: userInfo,
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });
+    },
+    // 获取用户信息
+    getUserInfo: function(resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/user/get_information.do'),
+            success: resolve,
+            error: reject
+        });
+    },
+    // 更新用户信息
+    updateUserInfo: function(userInfo, resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/user/update_information.do'),
+            data: userInfo,
+            method: 'POST',
+            success: resolve,
+            error: reject
+        });
+    },
+    // 登陆状态下更新密码
+    updateUserInfo: function(userInfo, resolve, reject) {
+        _mm.request({
+            url: _mm.getServerUrl('/user/reset_password.do'),
             data: userInfo,
             method: 'POST',
             success: resolve,
