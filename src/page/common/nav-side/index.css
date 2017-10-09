@@ -15,7 +15,7 @@
     color: #c60023;
 }
 /* 右侧内容区 */
-content with-nav {
+.content.with-nav {
     float: left;
     width: 950px;
 }
