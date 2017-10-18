@@ -12,7 +12,7 @@ var page = {
         orderNumber: _mm.getUrlParam('orderNumber')
     },
     init: function() {
-        // this.onLoad();
+        this.onLoad();
         this.bindEvent();
     },
     onLoad: function() {
