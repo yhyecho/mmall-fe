@@ -26,7 +26,7 @@ var page = {
         $(document).on('click', '.btn-submit', function() {
             var userInfo = {
                 phone: $.trim($('#phone').val()),
-                email: $.trim($('#eamil').val()),
+                email: $.trim($('#email').val()),
                 question: $.trim($('#question').val()),
                 answer: $.trim($('#answer').val())
             }

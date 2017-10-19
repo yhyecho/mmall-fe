@@ -10,6 +10,7 @@ var _mm = {
             type: param.method || 'GET',
             url: param.url || '',
             dataType: param.type || 'json',
+            data: param.data    || '',
             success: function (res) {
                 // 请求成功
                 if (0 === res.status) {
@@ -60,7 +61,7 @@ var _mm = {
         }
         // 手机号验证
         if ('phone' === type) {
-            return /^\d{10}$/.test(value);
+            return /^\d{11}$/.test(value);
         }
         // 邮箱格式验证
         if ('email' === type) {

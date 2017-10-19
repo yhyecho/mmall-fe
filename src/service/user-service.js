@@ -15,7 +15,7 @@ var _user = {
     checkLogin: function(resolve, reject) {
         _mm.request({
             url: _mm.getServerUrl('/user/get_user_info.do'),
-            method: 'POST',
+            method: 'GET',
             success: resolve,
             error: reject
         });
@@ -56,7 +56,7 @@ var _user = {
     logout: function(resolve, reject) {
         _mm.request({
             url: _mm.getServerUrl('/user/logout.do'),
-            method: 'POST',
+            method: 'GET',
             success: resolve,
             error: reject
         });
@@ -103,7 +103,7 @@ var _user = {
         });
     },
     // 登陆状态下更新密码
-    updateUserInfo: function(userInfo, resolve, reject) {
+    updatePassword: function(userInfo, resolve, reject) {
         _mm.request({
             url: _mm.getServerUrl('/user/reset_password.do'),
             data: userInfo,

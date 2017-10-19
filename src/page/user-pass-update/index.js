@@ -30,7 +30,7 @@ var page = {
             if(validateResult.status) {
                 // 更改用户密码
                 _user.updatePassword({
-                    password: userInfo.password,
+                    passwordOld: userInfo.password,
                     passwordNew: userInfo.passwordNew
                 }, function(res, msg) {
                     _mm.successTips(msg);
@@ -50,7 +50,7 @@ var page = {
             msg: ''
         };
         // 验证原密码是否为空
-        if(!_mm.validate(formData.phone, 'require')) {
+        if(!_mm.validate(formData.password, 'require')) {
             result.msg = '原密码不能为空';
             return result;
         }

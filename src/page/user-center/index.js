@@ -10,6 +10,7 @@ var templateIndex = require('./index.string');
 var page = {
     init: function() {
         this.onLoad();
+        this.bindEvent();
     },
     onLoad: function() {
         // 初始化左侧菜单
@@ -18,6 +19,12 @@ var page = {
         });
         // 加载用户信息
         this.loadUserInfo();
+    },
+    bindEvent: function() {
+        // 点击编辑按钮后的动作
+        $(document).on('click', '.btn-submit', function() {
+            window.location.href = './user-center-update.html';
+        });
     },
     // 加载用户信息
     loadUserInfo: function() {
